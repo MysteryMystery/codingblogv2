@@ -17,6 +17,7 @@ class CreateForumThreadTable extends Migration
             $table->increments('id');
             $table->string("url")->unique();
             $table->string("title");
+            $table->boolean("locked");
 
             $table->timestamps();
         });

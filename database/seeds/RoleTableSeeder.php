@@ -13,6 +13,7 @@ class RoleTableSeeder extends Seeder
     {
         DB::table("roles")->insert([
             "name" => "Site Owner",
+            "description" => "Has every permission.",
         ]);
     }
 }
