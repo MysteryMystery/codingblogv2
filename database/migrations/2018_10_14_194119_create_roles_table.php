@@ -18,6 +18,7 @@ class CreateRolesTable extends Migration
             $table->string("name")->unique();
             $table->string("display_name")->nullable();
             $table->string("description");
+            $table->string("display_image")->nullable();
             $table->timestamps();
 
             $table->softDeletes();

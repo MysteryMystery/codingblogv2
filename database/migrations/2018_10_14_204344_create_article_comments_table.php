@@ -17,6 +17,8 @@ class CreateArticleCommentsTable extends Migration
             $table->increments('id');
             $table->integer("creator_id");
             $table->string("contents");
+            $table->integer("article_id");
+            $table->integer("in_response_to_comment")->nullable();
             $table->timestamps();
         });
     }

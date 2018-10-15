@@ -23,7 +23,14 @@ class CreateForumPostTable extends Migration
             $table->integer("creator_id");
             $table->string("contents");
             $table->integer("thread_id");
+            $table->integer("up_votes")->unsigned();
+            $table->integer("down_votes")->unsigned();
+            $table->boolean("is_hidden")->default(false);
+            $table->boolean("is_edit_locked")->default(false);
+            $table->boolean("is_deleted")->default(false);
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 
