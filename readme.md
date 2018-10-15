@@ -5,5 +5,7 @@
 * npm install
 * composer update 
 * gulp  //or gulp --production if going production
+* php artisan key:generate
+
 ## NPM install bug
 * npm cache clean --force
