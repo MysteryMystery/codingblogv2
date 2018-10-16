@@ -1,5 +1,17 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
+## //TODO
+* Front End:
+    * Main Layout:
+        * Search Bar Adding
+        * Footer (re) designing
+        * Card colour schemes redoing
+
+* Backend:
+    * Routing:
+        * Standard routes
+
+
 ## Setup
 * npm install --global gulp-cli
 * npm install
