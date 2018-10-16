@@ -18,3 +18,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::name("api.")->group(function (){
+
+});
+
+Route::name("article.")->group(function (){
+
+});
+
+Route::name("forum.")->group(function (){
+
+});

@@ -1,6 +1,6 @@
 
 // Body
-$body-bg: #f8fafc;
+$body-bg: #002c2c/*rgba(13, 13, 14, 0.81)*/;
 
 // Typography
 $font-family-sans-serif: "Nunito", sans-serif;
@@ -11,10 +11,26 @@ $line-height-base: 1.6;
 $blue: #3490dc;
 $indigo: #6574cd;
 $purple: #9561e2;
-$pink: #f66D9b;
+$pink: #C3083F;
 $red: #e3342f;
 $orange: #f6993f;
 $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+$dark-pink: #950741;
+$burgundy: #6F2232;
+
+//Component Variables
+//Nav Bar
+$navbar-background: $dark-pink;
+
+//Showcase
+$showcase-card-background: #6d6d6d;
+
+//Footer
+
+//Article
+
+//Forums

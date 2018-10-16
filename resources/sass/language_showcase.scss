@@ -1,0 +1,181 @@
+@import "app";
+
+$python: green;
+$ruby: darkred;
+$java: white;
+$scala: #AF0000;
+$php: purple;
+$javascript: yellow;
+
+.language-showcase {
+    background-color: $showcase-card-background;
+    min-height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    border-radius: 2rem;
+}
+
+.language-showcase:hover {
+    -webkit-box-shadow: 0px 0px 39px -17px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 39px -17px rgba(0,0,0,1);
+    box-shadow: 0px 0px 39px -17px rgba(0,0,0,1);
+}
+
+.btn {
+    background-color: $white;
+    color: white;
+    border-color: $black;
+}
+
+/* Ruby */
+div#ruby {
+    border-right: 0.75rem solid $ruby;
+}
+
+div#ruby:hover {
+    border-left: 0.1rem solid $ruby;
+    border-top: 0.1rem solid $ruby;
+    border-bottom: 0.1rem solid $ruby;
+}
+
+.btn#ruby {
+    border-color: $ruby;
+    color: $ruby;
+}
+
+.btn#ruby:hover{
+    background-color: $pink;
+}
+
+.article#ruby {
+    border: 0.1rem solid $ruby;
+}
+
+/*Python */
+div#python {
+    border-left: 0.75rem solid $python;
+}
+
+div#python:hover {
+    border-right: 0.1rem solid $python;
+    border-top: 0.1rem solid $python;
+    border-bottom: 0.1rem solid $python;
+}
+
+.btn#python {
+    border-color: $python;
+    color: $python;
+}
+
+.btn#python:hover {
+    background-color: darkgreen;
+}
+
+.article#python {
+    border: 0.1rem solid $python;
+}
+
+/* Java */
+div#java {
+    border-right: 0.75rem solid $java;
+}
+
+div#java:hover {
+    border-left: 0.1rem solid  $java;
+    border-top: 0.1rem solid $java;
+    border-bottom: 0.1rem solid $java;
+}
+
+.btn#java {
+    border-color: $java;
+    color: $black;
+}
+
+.btn#java:hover {
+    background-color: #333;
+}
+
+.article#java {
+    border: 0.1rem solid $java;
+}
+
+/* Scala */
+div#scala {
+    border-left: 0.75rem solid $scala;
+}
+
+div#scala:hover {
+    border-right: 0.1rem solid $scala;
+    border-top: 0.1rem solid $scala;
+    border-bottom: 0.1rem solid $scala;
+}
+
+.btn#scala {
+    border-color: $scala;
+    color: $scala;
+}
+
+.btn#scala:hover {
+    background-color: $pink;
+}
+
+.article#scala {
+    border: 0.1rem solid $scala;
+}
+
+/* Php */
+div#php {
+    border-right: 0.75rem solid $php;
+}
+
+div#php:hover {
+    border-left: 0.1rem solid $php;
+    border-top: 0.1rem solid $php;
+    border-bottom: 0.1rem solid $php;
+}
+
+.btn#php {
+    border-color: $php;
+    color: $php;
+}
+
+.btn#php:hover {
+    background-color: $php;
+}
+
+.article#php {
+    border: 0.1rem solid $php;
+}
+
+/* Javascript */
+div#javascript {
+    border-left: 0.75rem solid $javascript;
+}
+
+div#javascript:hover {
+    border-right: 0.1rem solid $javascript;
+    border-top: 0.1rem solid $javascript;
+    border-bottom: 0.1rem solid $javascript;
+}
+
+.btn#javascript {
+    border-color: $javascript;
+    color: $black;
+}
+
+.btn#javascript:hover{
+    background-color: gold;
+}
+
+.article#javascript {
+    border: 0.1rem solid $javascript;
+}
+
+/* END language Showcase things */
+
+.code {
+    font-family: courier;
+    background-color: whitesmoke;/*rgba(255, 255, 255, 0.4);*/
+    border: 0.1rem solid black;
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+}

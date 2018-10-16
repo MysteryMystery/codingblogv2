@@ -5,10 +5,49 @@
 // Variables
 @import 'variables';
 
+//mixins
+@import "mixins";
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
 .navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  background-color: $navbar-background;
+    color: $white;
+    -webkit-box-shadow: 0 4px 5px black;
+    -moz-box-shadow: 0 4px 2px black;
+    box-shadow: 0 4px 5px black;
+}
+
+.navbar-brand,
+.nav-link {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: $white;
+    border-radius: 25rem;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+    color: white;
+    background-color: $pink;
+}
+
+.dropdown-menu {
+    background-color: $pink;
+    border: 0.1rem solid $dark-pink;
+}
+
+.dropdown-item,
+.dropdown-item:hover {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background-color: $dark-pink;
+    border-radius: 40rem;
+}
+
+.logo {
+    color: black;
 }
