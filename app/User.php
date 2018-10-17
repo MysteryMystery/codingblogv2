@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
@@ -30,5 +31,26 @@ class User extends Authenticatable
 
     public function roles(){
         return $this->belongsToMany(Role::class, "user_roles");
+    }
+
+    public function hasPermission(string $node): bool{
+        return DB::table("users")
+            ->join("user_roles", "user_roles.user_id", "=", "users.id")
+            ->join("roles", "user_roles.roles_id", "=", "roles.id")
+            ->join("permission_roles", "permission_roles.role_id", "=", "roles.id")
+            ->join("permissions", "permissions.id", "=", "permission_roles.permission_id")
+            ->where("permissions.node", "=", $node)
+            ->exists();
+    }
+
+    public function canHaveAdminTab(): bool {
+        return DB::table("users")
+            ->join("user_roles", "user_roles.user_id", "=", "users.id")
+            ->join("roles", "user_roles.role_id", "=", "roles.id")
+            ->join("permission_roles", "permission_roles.role_id", "=", "roles.id")
+            ->join("permissions", "permissions.id", "=", "permission_roles.permission_id")
+            ->where("users.id", $this->id)
+            ->where("permissions.node", "LIKE", "admin.%")
+            ->exists();
     }
 }

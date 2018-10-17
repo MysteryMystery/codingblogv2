@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\ArticleComment;
+use Illuminate\Support\Facades\DB;
 
 class Article extends Model
 {

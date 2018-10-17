@@ -23,19 +23,19 @@ $javascript: yellow;
 
 .btn {
     background-color: $white;
-    color: white;
+    color: black;
     border-color: $black;
 }
 
 /* Ruby */
 div#ruby {
     border-right: 0.75rem solid $ruby;
-}
-
-div#ruby:hover {
     border-left: 0.1rem solid $ruby;
     border-top: 0.1rem solid $ruby;
     border-bottom: 0.1rem solid $ruby;
+}
+
+div#ruby:hover {
 }
 
 .btn#ruby {
@@ -54,12 +54,13 @@ div#ruby:hover {
 /*Python */
 div#python {
     border-left: 0.75rem solid $python;
+
+    border-right: 0.1rem solid  $python;
+    border-top: 0.1rem solid $python;
+    border-bottom: 0.1rem solid $python;
 }
 
 div#python:hover {
-    border-right: 0.1rem solid $python;
-    border-top: 0.1rem solid $python;
-    border-bottom: 0.1rem solid $python;
 }
 
 .btn#python {
@@ -78,12 +79,13 @@ div#python:hover {
 /* Java */
 div#java {
     border-right: 0.75rem solid $java;
-}
 
-div#java:hover {
     border-left: 0.1rem solid  $java;
     border-top: 0.1rem solid $java;
     border-bottom: 0.1rem solid $java;
+}
+
+div#java:hover {
 }
 
 .btn#java {
@@ -102,12 +104,13 @@ div#java:hover {
 /* Scala */
 div#scala {
     border-left: 0.75rem solid $scala;
-}
 
-div#scala:hover {
     border-right: 0.1rem solid $scala;
     border-top: 0.1rem solid $scala;
     border-bottom: 0.1rem solid $scala;
+}
+
+div#scala:hover {
 }
 
 .btn#scala {
@@ -126,12 +129,13 @@ div#scala:hover {
 /* Php */
 div#php {
     border-right: 0.75rem solid $php;
-}
 
-div#php:hover {
     border-left: 0.1rem solid $php;
     border-top: 0.1rem solid $php;
     border-bottom: 0.1rem solid $php;
+}
+
+div#php:hover {
 }
 
 .btn#php {
@@ -140,7 +144,7 @@ div#php:hover {
 }
 
 .btn#php:hover {
-    background-color: $php;
+    background-color: #510051;
 }
 
 .article#php {
@@ -150,12 +154,13 @@ div#php:hover {
 /* Javascript */
 div#javascript {
     border-left: 0.75rem solid $javascript;
-}
 
-div#javascript:hover {
     border-right: 0.1rem solid $javascript;
     border-top: 0.1rem solid $javascript;
     border-bottom: 0.1rem solid $javascript;
+}
+
+div#javascript:hover {
 }
 
 .btn#javascript {

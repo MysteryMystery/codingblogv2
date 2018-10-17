@@ -24,7 +24,7 @@ Route::name("api.")->group(function (){
 });
 
 Route::name("article.")->group(function (){
-
+    Route::get("/search", "ArticleController@search")->name("search");
 });
 
 Route::name("forum.")->group(function (){

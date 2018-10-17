@@ -16,7 +16,7 @@ class CreateProgLanguagesTable extends Migration
         Schema::create('prog_languages', function (Blueprint $table) {
             $table->increments('id');
             $table->string("name")->unique();
-            $table->string("description");
+            $table->string("description")->nullable();
             $table->timestamps();
 
             //$table->primary(["id"]);

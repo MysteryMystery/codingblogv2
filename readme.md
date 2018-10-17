@@ -21,10 +21,10 @@
 
 ## Running
 * Start laragon!
-* npm run <production | dev>
+* npm run watch //Auto browser reloading!
 
 ## Compiling Assets
-* npm run <production | dev>
+* npm run <production | dev | watch>
 
 ## NPM install bug
 * npm cache clean --force

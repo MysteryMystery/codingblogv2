@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\ForumPost;
+use Illuminate\Support\Facades\DB;
 
 class ForumThread extends Model
 {

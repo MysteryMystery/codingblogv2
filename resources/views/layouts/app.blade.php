@@ -32,7 +32,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-laravel sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -61,6 +61,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('home') }}"> {{ __("Dashboard") }} </a>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -72,6 +74,20 @@
                                     </form>
                                 </div>
                             </li>
+
+                            @if(Auth::user()->canHaveAdminTab())
+                                <li class="nav-item dropdown">
+                                    <a id="navBarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {!! $icons->cog !!} Admin <span id="caret"></span>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">
+                                            Create Article
+                                        </a>
+                                    </div>
+                                </li>
+                            @endif
                         @endguest
                     </ul>
 
@@ -83,17 +99,9 @@
                                 {!! $icons->code !!} Programming Languages
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="{{ url('/') }}#python">Python</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ url('/') }}#java">Java</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ url('/') }}#scala">Scala</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ url('/') }}#ruby">Ruby</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ url('/') }}#php">PHP</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ url('/') }}#javascript">Javascript</a>
+                                    @foreach(\App\ProgrammingLanguage::allLangs() as $lang)
+                                        <a class="dropdown-item" href="{{ url('/') }}#{{ $lang->name }}">{{ $lang->name }}</a>
+                                    @endforeach
                             </div>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="#"> {!! $icons->users !!} Forum</a></li>
