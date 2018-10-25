@@ -13,7 +13,7 @@ class CreateForumThreadTable extends Migration
      */
     public function up()
     {
-        Schema::create('forum_thread', function (Blueprint $table) {
+        Schema::create('forum_threads', function (Blueprint $table) {
             $table->increments('id');
             $table->string("url")->unique();
             $table->string("title");

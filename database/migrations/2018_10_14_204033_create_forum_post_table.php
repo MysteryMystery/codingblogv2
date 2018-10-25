@@ -13,7 +13,7 @@ class CreateForumPostTable extends Migration
      */
     public function up()
     {
-        Schema::create('forum_post', function (Blueprint $table) {
+        Schema::create('forum_posts', function (Blueprint $table) {
 
             /**
              * Order the forum posts in a thread by the timestamps :) (older posts come first)

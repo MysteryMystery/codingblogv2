@@ -25,8 +25,8 @@ class ArticleController extends Controller
         $articles = Article
             ::where("title", "LIKE", "%{$request->input('searchbar')}%")
             ->join("users", "users.id", "=", "articles.creator_id")
-            ->join("frameworks", "framework.id", "=", "articles.framework_id")
-            ->select("articles.id", "articles.title", "articles.url", "articles.contents", "articles.language", "framework.name AS framework_name", "users.name")
+            ->join("frameworks", "frameworks.id", "=", "articles.framework_id")
+            ->select("articles.id", "articles.title", "articles.url", "articles.contents", "articles.language", "frameworks.name AS framework_name", "users.name")
             ->paginate(10);
 
         return view("article.search_view");

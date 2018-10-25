@@ -31,6 +31,12 @@
 .nav-link:hover {
     color: white;
     background-color: $pink;
+
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
 }
 
 .dropdown-menu {
@@ -50,4 +56,56 @@
 
 .logo {
     color: black;
+}
+
+footer {
+    background-color: $navbar-background;
+    /*position: absolute;
+    bottom: 0;
+    width: 100%;*/
+}
+
+input {
+    border-radius: 0.2rem;
+}
+
+.admin-side-bar {
+    color: $white;
+    background-color: #385d7a;
+    -moz-border-radius-topright: 1rem;
+    -moz-border-radius-bottomright: 1rem;
+    border-radius: 1rem;
+
+    padding-left: 2rem;
+    padding-bottom: 0.3rem;
+}
+
+.admin-tag-box {
+    border: 0.1rem solid #ccccff;
+    border-radius: 1rem;
+}
+
+.admin-card {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.admin-tag {
+    background-color: #6F2232;
+    color: $white;
+    border-radius: 0.2rem;
+    padding: 0.1rem;
+    margin-top: 0.1rem;
+    margin-left: 0.1rem;
+}
+
+.admin-tag:hover {
+    background-color: #1d643b;
+
+}
+
+.admin-tag-x {
+    background-color: #385d7a;
 }

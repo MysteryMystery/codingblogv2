@@ -22,6 +22,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/language_showcase.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
@@ -31,9 +32,17 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/prettifyCode.css')}}">
 </head>
 <body>
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+    </script>
+
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-laravel sticky-top">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -85,6 +94,7 @@
                                         <a class="dropdown-item" href="#">
                                             Create Article
                                         </a>
+                                        <a class="dropdown-item" href="{{ route("admin.users") }}">Manage Users</a>
                                     </div>
                                 </li>
                             @endif
@@ -108,6 +118,12 @@
                         <li class="nav-item"><a class="nav-link" href="#">{!! $icons->feather !!} The Team</a></li>
                         <li class="nav-item"><a class="nav-link " href="#"> {!! $icons->envelope !!} Contact</a></li>
                     </ul>
+
+                    <form class="form-inline my-2 my-lg-0" action="{{ route('article.search') }}">
+                        @csrf
+                        <input class="form-control mr-sm-2" style="margin-right: 0;" type="text" placeholder="Search..." name="search">
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">{!! $icons->search !!}</button>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -115,6 +131,31 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <!-- Left side of footer -->
+                    <div class="col-auto">
+                        <ul class="flex-column nav">
+                            @auth
+                                <li class="nav-item"><a class="nav-link" href="{{route("home")}}">Dashboard</a></li>
+                            @endauth
+                            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Forum</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">The Team</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Right side of footer -->
+                    <div class="col justify-content-center align-content-center text-right">
+                        <a class="navbar-brand" href="{{ url('/') }}">
+                            {{ config('app.name', 'Laravel') }} Logo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

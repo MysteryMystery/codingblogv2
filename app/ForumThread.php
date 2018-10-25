@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class ForumThread extends Model
 {
-    protected $table = "forum_thread";
+    protected $table = "forum_threads";
 
     public function posts() {
         $this->hasMany(ForumPost::class, "thread_id");

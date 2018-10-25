@@ -15,4 +15,5 @@ mix.browserSync('codingblogv2.test');
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
-    .sass("resources/sass/language_showcase.scss", "public/css");
+    .sass("resources/sass/language_showcase.scss", "public/css")
+    .sass("resources/sass/admin.scss", "public/css");

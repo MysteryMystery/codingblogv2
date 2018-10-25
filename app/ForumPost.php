@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class ForumPost extends Model
 {
-    protected $table = "forum_post";
+    protected $table = "forum_posts";
 
     public function thread() {
         $this->belongsTo(ForumThread::class, "thread_id");
